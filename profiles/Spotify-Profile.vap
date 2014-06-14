@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Id>260f4087-95de-49aa-812c-a5d98058251e</Id>
-  <Name>stOS (Star Citizen)</Name>
+  <Id>90b46adc-afd9-4bfe-bbeb-82bf1d388a30</Id>
+  <Name>Spotify</Name>
   <Commands>
     <Command>
-      <Id>d69cd4d2-f0aa-450e-a3d0-c580ccbdc45c</Id>
+      <Id>0b239023-81bb-4407-ae6a-9edd88b7403e</Id>
       <CommandString>Spotify less volume</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>c7de0dd8-16ca-4214-a5d7-3373a5216973</Id>
+          <Id>a1935072-2052-441e-9368-38d0ca4491ec</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -39,11 +39,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>87e3cf95-4ede-4b4b-948c-0e4fc49a0c8d</Id>
+      <Id>7a19425d-8e08-4655-b813-af97646fcd2c</Id>
       <CommandString>Spotify more volume</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>53d24c91-988c-4119-9591-5c41cbc973ed</Id>
+          <Id>8a265465-f388-43d0-9b83-78413121ca6c</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -74,11 +74,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>adcdb649-c3d3-4894-b2ed-61204b2c88e4</Id>
+      <Id>2b0f282e-14e1-4efd-b036-907cc6100571</Id>
       <CommandString>Spotify next track</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>4efe47c9-e9e6-48b4-ab36-19eb6d096986</Id>
+          <Id>99d9dd9f-b405-4b1c-b0b5-a16498bc016b</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -109,11 +109,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>53eb73a7-920b-4b59-8199-f34c00f2488b</Id>
+      <Id>c9564213-8321-4162-86a1-b1ae4b2587af</Id>
       <CommandString>Spotify pause;Spotify play</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>d3bcfc37-9c5a-4eef-b557-1fdcfff8d9d7</Id>
+          <Id>a84acc80-cbf4-4885-93e3-b5ac43d7c2f9</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>

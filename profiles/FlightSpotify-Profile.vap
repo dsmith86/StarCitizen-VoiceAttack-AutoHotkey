@@ -1,14 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Id>10cfe58f-a41b-4b65-b695-9d3a0c1fd57f</Id>
-  <Name>stOS (Star Citizen)</Name>
+  <Id>87608ab9-2803-4ee5-8026-22edeef40541</Id>
+  <Name>FlightSpotify</Name>
   <Commands>
     <Command>
-      <Id>c5cd48fc-d134-4508-89f3-4d3168a75fac</Id>
+      <Id>7a22a617-db63-4e20-9156-5e3b6ce0b801</Id>
+      <CommandString>Spotify less volume</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>9c7eb665-09f5-4bcf-b3a8-0ad224b62150</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>vdown</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns down the Spotify volume by 3 levels</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>6923a189-3680-49f5-8b7b-b5d1d8987f7c</Id>
+      <CommandString>Spotify more volume</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>c8395c6b-7fbd-4d08-aa94-d1aa3936ea7d</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>vup</Context2>
+          <Context3>C:\Program Files\AutoHotkey</Context3>
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns up the Spotify volume by 3 levels</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>9dfb596a-7b66-4856-871c-24ab51620f19</Id>
+      <CommandString>Spotify next track</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>e3bc7f67-4a55-4f82-9f93-e871d44ae2bd</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>next</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Plays the next track in Spotify</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>c1d9c972-0eb5-4d9b-998f-105e58c57d08</Id>
+      <CommandString>Spotify pause;Spotify play</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>8effa8c0-bd84-40b8-89bd-176439f5f685</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>pauseplay</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Plays / Pauses Spotify (even when hidden)</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>9183aa3e-bd6d-44a6-89b2-a5b2bfd3c407</Id>
       <CommandString>Comstab off</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>ebb14bd4-1fe5-467f-9d5b-42f259144174</Id>
+          <Id>8398b671-7b15-46f5-bdd2-b5bd30616029</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -21,7 +161,7 @@
           <InputMode>0</InputMode>
         </CommandAction>
         <CommandAction>
-          <Id>afee1b1c-1f9e-4eda-ba09-722eb736e000</Id>
+          <Id>bfcbecf2-b801-4211-810a-f986f1ff2b6f</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -51,11 +191,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>e6c0f980-7e38-47ae-93c4-2aedb5e53de9</Id>
+      <Id>e97c95d4-2c7e-4cf0-8aa8-db5f630b98ed</Id>
       <CommandString>Comstab on</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>01f3c567-741b-4f33-a2d4-15554dfa1724</Id>
+          <Id>56d20805-6823-48c0-9daa-77466c1e6b6f</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -68,7 +208,7 @@
           <InputMode>0</InputMode>
         </CommandAction>
         <CommandAction>
-          <Id>4b5e1933-65a6-46f1-b15b-c58271e911fc</Id>
+          <Id>44049510-9b57-455c-a3c6-d3d44de77897</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -98,11 +238,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>8e9cbd83-2cd1-4931-bc4f-b475e082030b</Id>
+      <Id>45085397-7fd0-4925-9bf2-a7ec210ca64e</Id>
       <CommandString>Couple</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>e82f4f03-7cb2-4252-8999-ea8ccd34e7c7</Id>
+          <Id>b4858829-12b8-4232-be6f-e9848722da12</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -115,7 +255,7 @@
           <InputMode>0</InputMode>
         </CommandAction>
         <CommandAction>
-          <Id>5cc789d9-fc0a-47a9-9bd3-f08c9fc56b8b</Id>
+          <Id>ca4ea374-6547-4557-935c-119e88186ae7</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -145,11 +285,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>51ffc68c-4291-4982-b83e-47fa9af7a540</Id>
+      <Id>b83167f0-2701-4cd1-bd93-fdcc2c3df5f9</Id>
       <CommandString>De-Couple</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>e2c1f940-58d6-469e-9852-ed170c2c2278</Id>
+          <Id>72058e42-29ea-4ea9-a569-3d7869ee251b</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -162,7 +302,7 @@
           <InputMode>0</InputMode>
         </CommandAction>
         <CommandAction>
-          <Id>1c6e963a-cfc5-4724-a141-b93e845646c8</Id>
+          <Id>be583564-c838-4871-ab50-9348d735e897</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -192,11 +332,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>db925426-78f2-4b98-b58f-c393ee482997</Id>
+      <Id>4f80eab4-1e2b-4903-86a9-e28bf8f3413d</Id>
       <CommandString>G-Safe off</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>6a1c5aad-b490-49d7-9de2-0111009622ec</Id>
+          <Id>23196d96-a6fd-4b1d-850a-ff40b70d4530</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -209,7 +349,7 @@
           <InputMode>0</InputMode>
         </CommandAction>
         <CommandAction>
-          <Id>c96209c2-8595-4ace-a0ea-c6f9c3872795</Id>
+          <Id>4b542ddd-411d-4440-a5c6-65425d77dff1</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -239,11 +379,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>9cd3f968-75e7-4780-9a89-c6b144fabcbf</Id>
+      <Id>368e4e36-7ff5-4d5c-badf-dcc16e05fde2</Id>
       <CommandString>G-Safe on</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>e7ea5329-88cf-417c-b58f-b70738dc19cb</Id>
+          <Id>6ee8a019-6619-4542-ab3a-fc168d7cd6e9</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -256,7 +396,7 @@
           <InputMode>0</InputMode>
         </CommandAction>
         <CommandAction>
-          <Id>f71e8113-4dda-4830-92b9-81f02be9ddd9</Id>
+          <Id>674d2ef6-3ab2-48ad-9905-0c3f1efe8eb7</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -286,11 +426,11 @@
       <CommandType>0</CommandType>
     </Command>
     <Command>
-      <Id>a5820a3c-af9b-4d65-85fa-3664f577728c</Id>
+      <Id>ba21d274-2675-462f-85d7-93daed3adc18</Id>
       <CommandString>Reset flightmodes</CommandString>
       <ActionSequence>
         <CommandAction>
-          <Id>93fcf73c-35b8-436a-ab69-05a45879fd7c</Id>
+          <Id>3b3d3134-9cd2-4a70-935c-b69b76c746be</Id>
           <ActionType>Launch</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
@@ -303,7 +443,7 @@
           <InputMode>0</InputMode>
         </CommandAction>
         <CommandAction>
-          <Id>020dc1eb-cf2d-4aa6-b6b0-d8dc37a4ddb7</Id>
+          <Id>dcf38b6b-59e8-4fc3-8385-fe2aa5d2b2ab</Id>
           <ActionType>Say</ActionType>
           <Duration>0</Duration>
           <Delay>0</Delay>
