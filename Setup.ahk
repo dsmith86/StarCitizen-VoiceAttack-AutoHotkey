@@ -13,7 +13,7 @@ SetupMainGUI()
 	
 	Gui, Margin, 15, 15
 	
-	Gui, Add, Picture, w500 h-1 x0 y0, 300i.jpg
+	Gui, Add, Picture, w500 h-1 x0 y0, assets\300i.jpg
 	
 	Gui, Add, Text, x10, Navigate to the folder with the profiles subfolder and AutoHotkey scripts:
 	Gui, Add, Button, gBrowseScripts yp-5 x370, Browse
