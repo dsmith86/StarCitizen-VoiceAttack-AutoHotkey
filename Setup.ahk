@@ -1,82 +1,115 @@
-#SingleInstance
+; MAIN SCRIPT
 
-SetupMainGUI()
+; Create a GUI
+; top & left margin: 15 pixels
+Gui, Margin, 15, 15
 
+; image banner for the top of the window
+; h-1 forces the picture to keep its aspect ratio when it is resized
+Gui, Add, Picture, w500 h-1 x0 y0, assets\300i.jpg
+
+; prompt text, a button, and an initially empty text label below
+Gui, Add, Text, x10, Navigate to the folder with the profiles subfolder and AutoHotkey scripts:
+; yp-n positions the element relative to its parent element by n pixels
+Gui, Add, Button, gBrowseInput yp-5 x370, Browse
+; when the below text label has content, it will be green
+Gui, Add, Text, cGreen x50 vProjectDirectory w480
+
+Gui, Add, Text, x10, Select an output folder in which to put all your scripts and profile:
+Gui, Add, Button, gBrowseOutput yp-5 x370, Browse
+Gui, Add, Text, cGreen x50 vOutputDirectory w480
+
+; add 3 checkboxes with associated variables (which would return either a 0 or 1, depending on the checkbox's state
+Gui, Add, Text,, Include the following command groups:
+Gui, Add, Checkbox, vFlightModes, Flight Modes
+Gui, Add, Checkbox, yp xp+100 vSpotify, Spotify
+Gui, Add, Checkbox, yp xp+70 vOtherCommands, Other commands (power, targeting, etc.)
+
+; submit button
+Gui, Add, Button, gConvert, Convert Files and Finish
+
+; show the GUI window
+Gui, Show, w500, Setup VoiceAttack Profile
+
+; finish executing commands at this point
 Return
 
-
-
-
-SetupMainGUI()
-{
-	global
-	
-	Gui, Margin, 15, 15
-	
-	Gui, Add, Picture, w500 h-1 x0 y0, assets\300i.jpg
-	
-	Gui, Add, Text, x10, Navigate to the folder with the profiles subfolder and AutoHotkey scripts:
-	Gui, Add, Button, gBrowseScripts yp-5 x370, Browse
-	Gui, Add, Text, cGreen x50 vProjectDirectory w480
-	
-	Gui, Add, Text, x10, Select an output folder in which to put all your scripts and profile:
-	Gui, Add, Button, gBrowseOutput yp-5 x370, Browse
-	Gui, Add, Text, cGreen x50 vOutputDirectory w480
-	
-	Gui, Add, Text,, Include the following command groups:
-	Gui, Add, Checkbox, vFlightModes, Flight Modes
-	Gui, Add, Checkbox, yp xp+100 vSpotify, Spotify
-	Gui, Add, Checkbox, yp xp+70 vOtherCommands, Other commands (power, targeting, etc.)
-	
-	Gui, Add, Button, gConvert, Convert Files and Finish
-	
-	Gui, Show, w500, Convert VoiceAttack Profile
-}
-
+; function that gets the chosen profile from the source directory
 RetrieveProfile(FilePath)
 {
+	; read the file at the corresponding file path, and store its contents in FileContents
 	FileRead, FileContents, %FilePath%
 	Return FileContents
 }
 
+; FUNCTIONS
+
+; function that creates a fresh directory at target output directory
 PrepareOutputDirectory()
 {
+	; remove the directory, 1 = recursively
 	FileRemoveDir, %OutputDirectory%, 1
+	; create the new directory
 	FileCreateDir, %OutputDirectory%
 }
 
+; function that finds any reference to AutoHotkey scripts and updates their location to reflect
+; the new directory
 UpdatePathsInProfile()
 {
+	; the regular expression with which to replace the correct text
+	; EXPLANATION:
+	; <Context> ----------------- the opening Context tag that would surround the 
+	;                             filepath attribute for the specific VoiceAttack command
+	;     .* -------------------- any extra characters that might have made it there somehow (unlikely)
+	;         (\\ --------------- since the filename must be captured, this defines the leftmost border of said filename
+	;             .* ------------ matches whatever may be in the filename, including spaces
+	;                 \.ahk ----- the dot must be escaped, because otherwise it just means 'any character'
+	;         ) -----------------
+	; </Context> ---------------- the closing tag, of course, needs to go, too.
 	Replace := "<Context>.*(\\.*\.ahk)</Context>"
+	; the string that will replace whatever match is found
 	Replacement := "<Context>" . OutputDirectory . "$1</Context>"
+	; perform the actual match and save the resulting replaced string into ProfileContents
 	ProfileContents := RegExReplace(ProfileContents, Replace, Replacement)
 }
 
+; function that saves the profile and requested AutoHotkey scripts to the target output directory
 SaveFilesToOutputDirectory(ByRef ProfileName, ByRef ProfileContents, FlightModes, Spotify)
 {
-	FileDelete, %OutputDirectory%\%ProfileName%-Profile.vap
+	; create the new profile in the output directory
 	FileAppend, %ProfileContents%, %OutputDirectory%\%ProfileName%-Profile.vap
+	; if the FlightModes boolean is true, copy it to the directory as well
 	if ( FlightModes)
 	{
-		FileCopy, %ProjectDirectory%\flightmode.ahk, %OutputDirectory%\flightmode.ahk, 1
+		FileCopy, %ProjectDirectory%\flightmode.ahk, %OutputDirectory%\flightmode.ahk
 	}
+	; same for Spotify
 	if ( Spotify )
 	{
-		FileCopy, %ProjectDirectory%\spotify.ahk, %OutputDirectory%\spotify.ahk, 1
+		FileCopy, %ProjectDirectory%\spotify.ahk, %OutputDirectory%\spotify.ahk
 	}
 }
 
-BrowseScripts:
-	FileSelectFolder, Path,,, Navigate to the folder with the AutoHotkey scripts
+; CONTROL SUBROUTINES
+
+; this subroutine is fired when the first browse button is clicked
+BrowseInput:
+	; opens a Browse dialog box to get a folder from the user ( 1 means a directory is mandatory )
+	FileSelectFolder, Path, 1,, Navigate to the folder with the AutoHotkey scripts
+	; submits control variables (NoHide prevents this from minimizing the GUI)
 	Gui, Submit, NoHide
 	if (!ErrorLevel)
 	{
+		; Sets the ProjectDirectory label in the GUI
 		GuiControl,, ProjectDirectory, %Path%
+		; Gets the ProjectDirectory and passes it to a global scope
 		ProjectDirectory = %Path%
 		global ProjectDirectory := ProjectDirectory
 	}
 Return
 
+; this subroutine is fired when the second browse button is clicked
 BrowseOutput:
 	FileSelectFolder, Path, 1,, Select an output folder in which to put all your scripts and profile
 	Gui, Submit, NoHide
@@ -84,63 +117,75 @@ BrowseOutput:
 	{
 		GuiControl,, OutputDirectory, %Path%
 		OutputDirectory = %Path%
+		; appends an additional subdirectory onto the output directory
 		OutputDirectory := OutputDirectory . "\SC-VoiceAttack-AutoHotkey"
 		global OutputDirectory := OutputDirectory
 	}
 Return
 
+; this subroutine is fired when the Convert button is pressed
 Convert:
 	Gui, Submit, NoHide
 
+	; makes sure there is a project directory selected
 	if ( !ProjectDirectory )
 	{
-		MsgBox Error! Please choose a script input directory.
+		MsgBox Error! Please choose an input directory.
 		Return
 	}
 	
+	; makes sure there is an output directory selected
 	if ( !OutputDirectory )
 	{
 		MsgBox Error! Please choose an output directory.
 		Return
 	}
 	
+	; makes sure at least one package is selected
 	if ( !FlightModes && !Spotify && !OtherCommands )
 	{
-		MsgBox Error! Please choose at least one command category.
+		MsgBox Error! Please choose at least one command package.
 		Return
 	}
 	
+	; resets the profile name
 	ProfileName := ""
 	
+	; appends "Flight" if the FlightModes checkbox is checked
 	if ( FlightModes )
 	{
 		ProfileName := "Flight"
 	}
 	
+	; same as above. Note that this string is appended to the end of the last, if it exists.
 	if ( Spotify )
 	{
 		ProfileName := ProfileName . "Spotify"
 	}
 	
+	; same. Voila! This gives you 7 possible choices for a profile.
 	if ( OtherCommands )
 	{
 		ProfileName := ProfileName . "Other"
 	}
 	
+	; creates a profile path to be retrieved from the project (input) directory
 	ProfilePath := ProjectDirectory . "\profiles\" . ProfileName . "-Profile.vap"
+	; retrieves the contents from that path (SEE: above)
 	ProfileContents := RetrieveProfile(ProfilePath)
 	
+	; sets up the output directory (SEE: above)
 	PrepareOutputDirectory()
 	
+	; updates the profile to match the output directory (SEE: above)
 	UpdatePathsInProfile()
 	
+	; passes a profile name, the profile's contents, and booleans that indicate whether certain packages are requested
 	SaveFilesToOutputDirectory(ProfileName, ProfileContents, FlightModes, Spotify)
-	
-	FileDelete, newprofile.txt
-	FileAppend, %ProfileContents%, newprofile.txt
-	
 Return
 
+; this subroutine fires when the Close button is clicked, or the window is closed in any other traditional fashion.
 GuiClose:
+	; exits the app
 	ExitApp
 Return
