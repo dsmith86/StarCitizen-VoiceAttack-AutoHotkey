@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>10cfe58f-a41b-4b65-b695-9d3a0c1fd57f</Id>
+  <Name>stOS (Star Citizen)</Name>
+  <Commands>
+    <Command>
+      <Id>c5cd48fc-d134-4508-89f3-4d3168a75fac</Id>
+      <CommandString>Comstab off</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>ebb14bd4-1fe5-467f-9d5b-42f259144174</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\flightmode.ahk</Context>
+          <Context2>c-off</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+        <CommandAction>
+          <Id>afee1b1c-1f9e-4eda-ba09-722eb736e000</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>Com stab off</Context>
+          <Context2>IVONA 2 Brian</Context2>
+          <X>70</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns Comstab off</Description>
+      <Category>Flight Modes</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>e6c0f980-7e38-47ae-93c4-2aedb5e53de9</Id>
+      <CommandString>Comstab on</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>01f3c567-741b-4f33-a2d4-15554dfa1724</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\flightmode.ahk</Context>
+          <Context2>c-on</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+        <CommandAction>
+          <Id>4b5e1933-65a6-46f1-b15b-c58271e911fc</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>Com stab on</Context>
+          <Context2>IVONA 2 Brian</Context2>
+          <X>70</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns Comstab on</Description>
+      <Category>Flight Modes</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>8e9cbd83-2cd1-4931-bc4f-b475e082030b</Id>
+      <CommandString>Couple</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>e82f4f03-7cb2-4252-8999-ea8ccd34e7c7</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\flightmode.ahk</Context>
+          <Context2>couple</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+        <CommandAction>
+          <Id>5cc789d9-fc0a-47a9-9bd3-f08c9fc56b8b</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>Coupled flight on</Context>
+          <Context2>IVONA 2 Brian</Context2>
+          <X>70</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Couples</Description>
+      <Category>Flight Modes</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>51ffc68c-4291-4982-b83e-47fa9af7a540</Id>
+      <CommandString>De-Couple</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>e2c1f940-58d6-469e-9852-ed170c2c2278</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\flightmode.ahk</Context>
+          <Context2>decouple</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+        <CommandAction>
+          <Id>1c6e963a-cfc5-4724-a141-b93e845646c8</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>Coupled flight off</Context>
+          <Context2>IVONA 2 Brian</Context2>
+          <X>70</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>De-Couples</Description>
+      <Category>Flight Modes</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>db925426-78f2-4b98-b58f-c393ee482997</Id>
+      <CommandString>G-Safe off</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>6a1c5aad-b490-49d7-9de2-0111009622ec</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\flightmode.ahk</Context>
+          <Context2>g-off</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+        <CommandAction>
+          <Id>c96209c2-8595-4ace-a0ea-c6f9c3872795</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>G Safe off</Context>
+          <Context2>IVONA 2 Brian</Context2>
+          <X>70</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns G-Safe off</Description>
+      <Category>Flight Modes</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>9cd3f968-75e7-4780-9a89-c6b144fabcbf</Id>
+      <CommandString>G-Safe on</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>e7ea5329-88cf-417c-b58f-b70738dc19cb</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\flightmode.ahk</Context>
+          <Context2>g-on</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+        <CommandAction>
+          <Id>f71e8113-4dda-4830-92b9-81f02be9ddd9</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>G Safe on</Context>
+          <Context2>IVONA 2 Brian</Context2>
+          <X>70</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns G-Safe on</Description>
+      <Category>Flight Modes</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>a5820a3c-af9b-4d65-85fa-3664f577728c</Id>
+      <CommandString>Reset flightmodes</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>93fcf73c-35b8-436a-ab69-05a45879fd7c</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\flightmode.ahk</Context>
+          <Context2>reset</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+        <CommandAction>
+          <Id>020dc1eb-cf2d-4aa6-b6b0-d8dc37a4ddb7</Id>
+          <ActionType>Say</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>Resetting flight modes. Com stab and G-Safe are on.</Context>
+          <Context2>IVONA 2 Brian</Context2>
+          <X>70</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Reset flightmodes (Comstab, G-Safe). Only needed once per game session.</Description>
+      <Category>Flight Modes</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+  </Commands>
+  <OverrideGlobal>false</OverrideGlobal>
+  <GlobalHotkeyIndex>0</GlobalHotkeyIndex>
+  <GlobalHotkeyEnabled>false</GlobalHotkeyEnabled>
+  <GlobalHotkeyValue>0</GlobalHotkeyValue>
+  <GlobalHotkeyShift>0</GlobalHotkeyShift>
+  <GlobalHotkeyAlt>0</GlobalHotkeyAlt>
+  <GlobalHotkeyCtrl>0</GlobalHotkeyCtrl>
+  <GlobalHotkeyWin>0</GlobalHotkeyWin>
+  <GlobalHotkeyPassThru>false</GlobalHotkeyPassThru>
+  <OverrideMouse>false</OverrideMouse>
+  <MouseIndex>0</MouseIndex>
+  <OverrideStop>false</OverrideStop>
+  <StopCommandHotkeyEnabled>false</StopCommandHotkeyEnabled>
+  <StopCommandHotkeyValue>0</StopCommandHotkeyValue>
+  <StopCommandHotkeyShift>0</StopCommandHotkeyShift>
+  <StopCommandHotkeyAlt>0</StopCommandHotkeyAlt>
+  <StopCommandHotkeyCtrl>0</StopCommandHotkeyCtrl>
+  <StopCommandHotkeyWin>0</StopCommandHotkeyWin>
+  <StopCommandHotkeyPassThru>false</StopCommandHotkeyPassThru>
+  <DisableShortcuts>false</DisableShortcuts>
+  <UseOverrideListening>true</UseOverrideListening>
+  <OverrideListeningCommand>Computer</OverrideListeningCommand>
+</Profile>

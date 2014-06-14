@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>260f4087-95de-49aa-812c-a5d98058251e</Id>
+  <Name>stOS (Star Citizen)</Name>
+  <Commands>
+    <Command>
+      <Id>d69cd4d2-f0aa-450e-a3d0-c580ccbdc45c</Id>
+      <CommandString>Spotify less volume</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>c7de0dd8-16ca-4214-a5d7-3373a5216973</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>vdown</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns down the Spotify volume by 3 levels</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>87e3cf95-4ede-4b4b-948c-0e4fc49a0c8d</Id>
+      <CommandString>Spotify more volume</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>53d24c91-988c-4119-9591-5c41cbc973ed</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>vup</Context2>
+          <Context3>C:\Program Files\AutoHotkey</Context3>
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Turns up the Spotify volume by 3 levels</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>adcdb649-c3d3-4894-b2ed-61204b2c88e4</Id>
+      <CommandString>Spotify next track</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>4efe47c9-e9e6-48b4-ab36-19eb6d096986</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>next</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Plays the next track in Spotify</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+    <Command>
+      <Id>53eb73a7-920b-4b59-8199-f34c00f2488b</Id>
+      <CommandString>Spotify pause;Spotify play</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <Id>d3bcfc37-9c5a-4eef-b557-1fdcfff8d9d7</Id>
+          <ActionType>Launch</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>E:\googledrive\Google Drive\Scripts\SC_VoiceAttack_AutoHotKey\spotify.ahk</Context>
+          <Context2>pauseplay</Context2>
+          <Context3 />
+          <X>0</X>
+          <Y>0</Y>
+          <InputMode>0</InputMode>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Description>Plays / Pauses Spotify (even when hidden)</Description>
+      <Category>Spotify</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+    </Command>
+  </Commands>
+  <OverrideGlobal>false</OverrideGlobal>
+  <GlobalHotkeyIndex>0</GlobalHotkeyIndex>
+  <GlobalHotkeyEnabled>false</GlobalHotkeyEnabled>
+  <GlobalHotkeyValue>0</GlobalHotkeyValue>
+  <GlobalHotkeyShift>0</GlobalHotkeyShift>
+  <GlobalHotkeyAlt>0</GlobalHotkeyAlt>
+  <GlobalHotkeyCtrl>0</GlobalHotkeyCtrl>
+  <GlobalHotkeyWin>0</GlobalHotkeyWin>
+  <GlobalHotkeyPassThru>false</GlobalHotkeyPassThru>
+  <OverrideMouse>false</OverrideMouse>
+  <MouseIndex>0</MouseIndex>
+  <OverrideStop>false</OverrideStop>
+  <StopCommandHotkeyEnabled>false</StopCommandHotkeyEnabled>
+  <StopCommandHotkeyValue>0</StopCommandHotkeyValue>
+  <StopCommandHotkeyShift>0</StopCommandHotkeyShift>
+  <StopCommandHotkeyAlt>0</StopCommandHotkeyAlt>
+  <StopCommandHotkeyCtrl>0</StopCommandHotkeyCtrl>
+  <StopCommandHotkeyWin>0</StopCommandHotkeyWin>
+  <StopCommandHotkeyPassThru>false</StopCommandHotkeyPassThru>
+  <DisableShortcuts>false</DisableShortcuts>
+  <UseOverrideListening>true</UseOverrideListening>
+  <OverrideListeningCommand>Computer</OverrideListeningCommand>
+</Profile>
