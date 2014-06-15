@@ -1,6 +1,9 @@
 #SingleInstance On
 ; MAIN SCRIPT
 
+; set Extension type
+global Extension := "ahk"
+	
 ; Create a GUI
 ; top & left margin: 15 pixels
 Gui, Margin, 15, 15
@@ -56,7 +59,7 @@ PrepareOutputDirectory()
 
 ; function that finds any reference to AutoHotkey scripts and updates their location to reflect
 ; the new directory
-UpdatePathsInProfile()
+UpdatePathsInProfile(ByRef ProfileContents)
 {
 	; the regular expression with which to replace the correct text
 	; EXPLANATION:
@@ -65,12 +68,12 @@ UpdatePathsInProfile()
 	;     .* -------------------- any extra characters that might have made it there somehow (unlikely)
 	;         (\\ --------------- since the filename must be captured, this defines the leftmost border of said filename
 	;             .* ------------ matches whatever may be in the filename, including spaces
-	;                 \.ahk ----- the dot must be escaped, because otherwise it just means 'any character'
+	;                 \.[type] ----- the dot must be escaped, because otherwise it just means 'any character'
 	;         ) -----------------
 	; </Context> ---------------- the closing tag, of course, needs to go, too.
-	Replace := "<Context>.*(\\.*\.ahk)</Context>"
+	Replace := "<Context>.*(\\.*\.)ahk</Context>"
 	; the string that will replace whatever match is found
-	Replacement := "<Context>" . OutputDirectory . "$1</Context>"
+	Replacement := "<Context>" . OutputDirectory . "$1" . Extension . "</Context>"
 	; perform the actual match and save the resulting replaced string into ProfileContents
 	ProfileContents := RegExReplace(ProfileContents, Replace, Replacement)
 }
@@ -84,30 +87,30 @@ SaveFilesToOutputDirectory(ByRef ProfileName, ByRef ProfileContents, FlightModes
 	; if the FlightModes boolean is true, copy it to the directory as well
 	if ( FlightModes)
 	{
-		FileRead, check, %ProjectDirectory%\scripts\flightmode.ahk
+		FileRead, check, %ProjectDirectory%\scripts\flightmode.%Extension%
 		if ( ErrorLevel )
 		{
-			MsgBox Error! Could not find flightmode.ahk.
+			MsgBox Error! Could not find flightmode.%Extension%.
 			Return
 		}
 		else
 		{
-			FileCopy, %ProjectDirectory%\scripts\flightmode.ahk, %OutputDirectory%\flightmode.ahk
+			FileCopy, %ProjectDirectory%\scripts\flightmode.%Extension%, %OutputDirectory%\flightmode.%Extension%
 		}
 		
 	}
 	; same for Spotify
 	if ( Spotify )
 	{
-		FileRead, check, %ProjectDirectory%\scripts\spotify.ahk
+		FileRead, check, %ProjectDirectory%\scripts\spotify.%Extension%
 		if ( ErrorLevel )
 		{
-			MsgBox Error! Could not find spotify.ahk.
+			MsgBox Error! Could not find spotify.%Extension%.
 			Return
 		}
 		else
 		{
-			FileCopy, %ProjectDirectory%\scripts\spotify.ahk, %OutputDirectory%\spotify.ahk
+			FileCopy, %ProjectDirectory%\scripts\spotify.%Extension%, %OutputDirectory%\spotify.%Extension%
 		}
 	}
 	MsgBox, 4, Success!, Done! You can find your files at %OutputDirectory%. Would you like to open that directory now?
@@ -202,7 +205,7 @@ Convert:
 	PrepareOutputDirectory()
 	
 	; updates the profile to match the output directory (SEE: above)
-	UpdatePathsInProfile()
+	UpdatePathsInProfile(ProfileContents)
 	
 	; passes a profile name, the profile's contents, and booleans that indicate whether certain packages are requested
 	SaveFilesToOutputDirectory(ProfileName, ProfileContents, FlightModes, Spotify)
