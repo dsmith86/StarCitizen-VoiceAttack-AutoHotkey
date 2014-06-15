@@ -1,8 +1,11 @@
+; set the working directory
+setworkingdir,%A_scriptdir%
+; prevent additional instances from being created
 #SingleInstance On
 ; MAIN SCRIPT
 
 ; set Extension type
-global Extension := "ahk"
+Extension := "ahk"
 	
 ; Create a GUI
 ; top & left margin: 15 pixels
@@ -49,17 +52,21 @@ RetrieveProfile(FilePath)
 ; FUNCTIONS
 
 ; function that creates a fresh directory at target output directory
-PrepareOutputDirectory()
+PrepareOutputDirectory(ByRef OutputDirectory)
 {
 	; remove the directory, 1 = recursively
 	FileRemoveDir, %OutputDirectory%, 1
 	; create the new directory
 	FileCreateDir, %OutputDirectory%
+	if (ErrorLevel)
+	{
+		MsgBox directory error
+	}
 }
 
 ; function that finds any reference to AutoHotkey scripts and updates their location to reflect
 ; the new directory
-UpdatePathsInProfile(ByRef ProfileContents)
+UpdatePathsInProfile(ByRef ProfileContents, ByRef Extension, ByRef OutputDirectory)
 {
 	; the regular expression with which to replace the correct text
 	; EXPLANATION:
@@ -79,7 +86,7 @@ UpdatePathsInProfile(ByRef ProfileContents)
 }
 
 ; function that saves the profile and requested AutoHotkey scripts to the target output directory
-SaveFilesToOutputDirectory(ByRef ProfileName, ByRef ProfileContents, FlightModes, Spotify)
+SaveFilesToOutputDirectory(ByRef OutputDirectory, ByRef ProjectDirectory, ByRef ProfileName, ByRef ProfileContents, FlightModes, Spotify, ByRef Extension)
 {
 	; this can be further refactored in a later release to be more general
 	; create the new profile in the output directory
@@ -130,9 +137,8 @@ BrowseInput:
 	{
 		; Sets the ProjectDirectory label in the GUI
 		GuiControl,, ProjectDirectory, %Path%
-		; Gets the ProjectDirectory and passes it to a global scope
+		; Gets a reference to the ProjectDirectory
 		ProjectDirectory = %Path%
-		global ProjectDirectory := ProjectDirectory
 	}
 Return
 
@@ -146,7 +152,6 @@ BrowseOutput:
 		OutputDirectory = %Path%
 		; appends an additional subdirectory onto the output directory
 		OutputDirectory := OutputDirectory . "\SC-VoiceAttack-AutoHotkey"
-		global OutputDirectory := OutputDirectory
 	}
 Return
 
@@ -202,13 +207,14 @@ Convert:
 	ProfileContents := RetrieveProfile(ProfilePath)
 	
 	; sets up the output directory (SEE: above)
-	PrepareOutputDirectory()
+	PrepareOutputDirectory(OutputDirectory)
 	
 	; updates the profile to match the output directory (SEE: above)
-	UpdatePathsInProfile(ProfileContents)
+	UpdatePathsInProfile(ProfileContents, Extension, OutputDirectory)
 	
 	; passes a profile name, the profile's contents, and booleans that indicate whether certain packages are requested
-	SaveFilesToOutputDirectory(ProfileName, ProfileContents, FlightModes, Spotify)
+	; NEEDS SERIOUS REFACTORING
+	SaveFilesToOutputDirectory(OutputDirectory, ProjectDirectory, ProfileName, ProfileContents, FlightModes, Spotify, Extension)
 Return
 
 ; this subroutine fires when the Close button is clicked, or the window is closed in any other traditional fashion.

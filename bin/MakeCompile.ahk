@@ -16,7 +16,7 @@ if (ErrorLevel)
 }
 
 ; Replace the Extension (ahk => exe)
-StringReplace, FileContents, FileContents, global Extension := "ahk", global Extension := "exe"
+StringReplace, FileContents, FileContents, Extension := "ahk", Extension := "exe"
 
 ; Compensate for the executable moving down a directory
 StringReplace, FileContents, FileContents, assets\300i.jpg, ..\assets\300i.jpg
