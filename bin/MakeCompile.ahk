@@ -25,8 +25,11 @@ StringReplace, FileContents, FileContents, assets\300i.jpg, ..\assets\300i.jpg
 FileDelete, Setup.ahk
 FileAppend, %FileContents%, Setup.ahk
 
+; path to the assets directory
+AssetsDir := "%A_WorkingDir%\..\..\assets"
+
 ; Compile the script into an executable using Ahk2Exe (included when you install AutoHotkey
-Run, "C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "%A_WorkingDir%\Setup.ahk" /out "%A_WorkingDir%\Setup.exe"
+Run, "C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "%A_WorkingDir%\Setup.ahk" /out "%A_WorkingDir%\Setup.exe" /icon "%AssetsDir%\AC.ico"
 ; Wait for the operation to complete (shouldn't take more than a few milliseconds)
 Sleep, 1000
 ; Delete the extra Setup.ahk file
