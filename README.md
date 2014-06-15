@@ -40,9 +40,13 @@ I know that a lot of twitch streamers like to play music while they stream. I've
 ### "Just give me the files!"
 1. If you don't need or want AutoHotkey, go to [releases tab][releases] and download the zip file that's there.
 2. Unzip and run Setup.exe, which will guide you through customizing your profile.
-3. Import that profile into VoiceAttack. If you don't have the TTS engine that I use (IVONA 2 voice Brian), then AutoHotkey will attempt to use your default engine (I may add an option to choose your engine in the Setup script in a future release).
-4. It doesn't matter where you keep your scripts, just make sure you don't change them after you've run the Setup script; otherwise, you'll have to manually point VoiceAttack to their new location.
-5. Enjoy the game, and enjoy your spiffy new voice commands!
+3. Click the first Browse button and navigate to the folder you just downloaded:
+<img src="http://i.imgur.com/Ie6pjJm.png" width="400" />
+4. Click the second Browse button and choose a folder to save the profile and scripts.
+5. Click "Yes" at the prompt to navigate to the newly created folder.
+6. Import that profile into VoiceAttack. If you don't have the TTS engine that I use (IVONA 2 voice Brian), then AutoHotkey will attempt to use your default engine (I may add an option to choose your engine in the Setup script in a future release).
+7. It doesn't matter where you keep your scripts, just make sure you don't change them after you've run the Setup script; otherwise, you'll have to manually point VoiceAttack to their new location.
+8. Enjoy the game, and enjoy your spiffy new voice commands!
 
 ### "Great, but I could make these scripts even better."
 Awesome! You have a few options:
