@@ -1,3 +1,4 @@
+#SingleInstance On
 ; MAIN SCRIPT
 
 ; Create a GUI
@@ -77,18 +78,41 @@ UpdatePathsInProfile()
 ; function that saves the profile and requested AutoHotkey scripts to the target output directory
 SaveFilesToOutputDirectory(ByRef ProfileName, ByRef ProfileContents, FlightModes, Spotify)
 {
+	; this can be further refactored in a later release to be more general
 	; create the new profile in the output directory
 	FileAppend, %ProfileContents%, %OutputDirectory%\%ProfileName%-Profile.vap
 	; if the FlightModes boolean is true, copy it to the directory as well
 	if ( FlightModes)
 	{
-		FileCopy, %ProjectDirectory%\flightmode.ahk, %OutputDirectory%\flightmode.ahk
+		FileRead, check, %ProjectDirectory%\scripts\flightmode.ahk
+		if ( ErrorLevel )
+		{
+			MsgBox Error! Could not find flightmode.ahk.
+			Return
+		}
+		else
+		{
+			FileCopy, %ProjectDirectory%\scripts\flightmode.ahk, %OutputDirectory%\flightmode.ahk
+		}
+		
 	}
 	; same for Spotify
 	if ( Spotify )
 	{
-		FileCopy, %ProjectDirectory%\spotify.ahk, %OutputDirectory%\spotify.ahk
+		FileRead, check, %ProjectDirectory%\scripts\spotify.ahk
+		if ( ErrorLevel )
+		{
+			MsgBox Error! Could not find spotify.ahk.
+			Return
+		}
+		else
+		{
+			FileCopy, %ProjectDirectory%\scripts\spotify.ahk, %OutputDirectory%\spotify.ahk
+		}
 	}
+	MsgBox, 4, Success!, Done! You can find your files at %OutputDirectory%. Would you like to open that directory now?
+	IfMsgBox Yes
+		Run, %OutputDirectory%
 }
 
 ; CONTROL SUBROUTINES

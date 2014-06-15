@@ -1,9 +1,0 @@
-0	-	decoupled		g-safe off		comstab off
-1	-	decoupled		g-safe off		comstab on
-2	-	decoupled		g-safe on		comstab off
-3	-	decoupled		g-safe on		comstab on
-4	-	couple			g-safe off		comstab off
-5	-	couple			g-safe off		comstab on
-6	-	couple			g-safe on		comstab off
-7	-	couple			g-safe on		comstab on			[reset flightmodes]
-
